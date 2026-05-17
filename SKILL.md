@@ -27,7 +27,8 @@ vibe-cv-copilot/
   │   └── 样板范例.docx         # The Original Resume (User's manually checked baseline)
   ├── scripts/                  # Python scripts (e.g. generate_docx.py)
   ├── work/                     # Gap analysis, score reports, claim-source-map.md
-  └── output/                   # Final resume.docx, resume.md, and pitch_script.md
+  ├── output/                   # Final resume.docx, resume.md, and pitch_script.md
+  └── Career_Knowledge_Base/    # Industry knowledge, mock QnA, and interview hooks
 ```
 
 ## Operational Modes

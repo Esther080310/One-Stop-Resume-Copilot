@@ -1,0 +1,3 @@
+这是一个占位文件，用于保持空目录。
+
+在实际使用中，Agent 自动生成的 Markdown 审核草稿（如 `review_draft_XX公司_XX岗位.md`）会存放在这里，供你进行 Human-in-the-loop 人工审核。
