@@ -48,6 +48,7 @@ Trae-Vibe-CV-Copilot/
   ├── SKILL.md                  # 整个 Agent 的大脑 (Prompt 规约与工作哲学)
   ├── Job_Application_Tracker.xlsx # 求职投递进度追踪与项目管理表
   ├── README.md                 # 项目介绍
+  ├── CHANGELOG_AND_CREDITS.md  # 版本迭代记录与开源项目鸣谢
   ├── scripts/                  
   │   └── generate_tiktok_docx.py # 执行手臂：无损注入 Word 的自动化排版脚本
   ├── Career_Knowledge_Base/    
@@ -80,11 +81,25 @@ Trae-Vibe-CV-Copilot/
 
 ---
 
-## 🌟 欢迎 Star & 持续更新
+## 🌟 欢迎 Star & 共创鸣谢 (Credits & License)
 
 如果这个工作流帮助你拿到了满意的 Offer，或者给你带来了灵感，请不要吝啬右上角的 **Star ⭐️**！这对我非常重要。
 
 本项目会根据大模型能力的进化和实际面试反馈**持续迭代更新**，欢迎 Watch 关注最新动态。
+
+### 🙏 特别鸣谢 (Acknowledgments)
+本项目的诞生并非闭门造车，而是站在了开源社区诸多优秀前辈的肩膀上。在探索如何打造“最强简历 Agent”的过程中，我大量学习并吸收了以下开源项目的优秀设计理念（如 HITL 人工审核、0-to-1 项目孵化、1-to-10 实习复盘等）：
+
+- [Li-Baichuan-James/cv-skill](https://github.com/Li-Baichuan-James/cv-skill) - 提供了防幻觉的 Claim-Source Map 设计理念
+- [spontaneousai/job-hunt-copilot](https://github.com/spontaneousai/job-hunt-copilot) - 提供了 JD 动态匹配与素材库架构思路
+- [LiuMengxuan04/shushu-internship-tool](https://github.com/LiuMengxuan04/shushu-internship-tool) - 提供了 0-to-1 项目孵化与防撞车改造理念
+- [Sunanzhe2004/shushu-internship-resume-optimizer](https://github.com/Sunanzhe2004/shushu-internship-resume-optimizer) - 提供了 1-to-10 实习深度复盘工作流思路
+
+> **详细的版本迭代历史与思路吸收过程，请参阅：[`CHANGELOG_AND_CREDITS.md`](./CHANGELOG_AND_CREDITS.md)**
+
+### 📄 开源声明与共创
+- **License**: 本项目采用 **MIT License** 开源。
+- **关于借鉴**: 如果您在自己的项目中使用了本项目的核心 Prompt（`SKILL.md`）或工作流架构，**请在您的 README 中保留本项目的链接出处**。开源不易，尊重原创与共创精神是我们共同维护良好社区氛围的基石。
 
 ---
 
