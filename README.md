@@ -8,7 +8,7 @@
 
 - ❌ **痛点 1：排版易碎 (Format Fragility)**
   *现象*：AI 网页版生成的简历排版死板，一旦想微调（加粗一个词、缩小一号字体），格式立刻崩盘；而 LaTeX 门槛过高，改一点就报错。
-  *破局*：**无损 Docx 模板注入**。我们放弃了繁琐的 LaTeX，利用 Python (`python-docx`) 直接在底层修改 XML 文本节点。这意味着，你可以用你**手动精调过页边距和字体的完美 Word 简历**作为底稿，AI 只做精准的符合底稿格式要求的“填词游戏”，实现真正的所见即所得。（*注：如果你目前连一份底稿都没有，没关系，仓库内的 `resources/` 目录下已为你准备了一份排版绝佳、自带占位符的脱敏 `Blank_Template_样板范例.docx`，开箱即用！*）
+  *破局*：**无损 Docx 模板注入**。我们放弃了繁琐的 LaTeX，利用 Python (`python-docx`) 直接在底层修改 XML 文本节点。这意味着，你可以用你**手动精调过页边距和字体的完美 Word 简历**作为底稿，AI 只做精准的符合底稿格式要求的“填词游戏”，实现真正的所见即所得。
 
 - ❌ **痛点 2：AI 幻觉与敷衍填词 (AI Hallucination)**
   *现象*：为了迎合 JD（岗位描述），AI 经常“无中生有”或者使用诸如“数据工程：为了夯实底层数据基座”这类空洞的废话修饰语。
@@ -54,7 +54,7 @@ Trae-Vibe-CV-Copilot/
   ├── Career_Knowledge_Base/    
   │   ├── Interview_Mock_QnA_Example.md # 面试武器库：简历钩子拆解与深挖框架
   │   └── Cover_Letters_and_Pitches.md  # 投递求职信：高定版邮件正文与话术
-  ├── resources/                # 占位目录：存放原始简历素材与 Word 底稿 (含 Blank_Template)
+  ├── resources/                # 占位目录：存放原始简历素材与 Word 底稿
   ├── work/                     # 占位目录：存放 HITL 人工审核 Markdown 草稿
   └── output/                   # 占位目录：存放最终生成的 Docx 简历
 ```
