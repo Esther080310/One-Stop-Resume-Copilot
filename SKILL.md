@@ -53,10 +53,10 @@ You operate in four distinct modes depending on the user's intent and starting p
 3. **Verdict**: Conclude with a recommendation: "Worth applying (Minor tweaks needed)", "Requires heavy rewrite", or "Low match (Skip)".
 **Do NOT** rewrite the resume or generate PDFs in this mode. Keep it conversational and fast.
 
-### Mode 2: Deep Build (The 8-Step Professional Pipeline)
+### Mode 2: Deep Build (The 9-Step Professional Pipeline)
 **Trigger**: User says "Tailor my resume for this", "Generate PDF", or explicitly confirms to proceed after a Quick Assess.
-**Goal**: Produce the final, fact-checked LaTeX/Docx resume and pitch script.
-**Action**: Execute the rigorous 8-step pipeline below.
+**Goal**: Produce the final, fact-checked LaTeX/Docx resume, pitch script, and cover letter.
+**Action**: Execute the rigorous 9-step pipeline below.
 
 ### Mode 3: Internship Retrospective (The "1-to-10" Value Extractor)
 **Trigger**: User provides internship code repos, weekly reports, or business docs and says "Help me summarize this internship" or "Extract my achievements".
@@ -67,7 +67,7 @@ You operate in four distinct modes depending on the user's intent and starting p
 3. **Mock QnA Generation**: Reverse-engineer potential interview questions based on the identified technical difficulties and generate a comprehensive "Internship Retrospective Weaponry" document in `Career_Knowledge_Base/`.
 4. **Transition to Mode 2**: Inject these newly crafted experiences into the user's `resources/projects/` and proceed to Mode 2 if a JD is provided.
 
-## Workflow: The 8-Step Professional Pipeline (For Mode 2)
+## Workflow: The 9-Step Professional Pipeline (For Mode 2)
 
 ### Step 1: Input Standardization (Schema Intake)
 1. Do not start immediately with just a JD. Ask the user to confirm the **Target Role, Industry, Career Transition Context, Locked Fields**, and **Output Format**.
@@ -119,5 +119,16 @@ You operate in four distinct modes depending on the user's intent and starting p
 1. **Length Constraint**: Ensure the drafted content strictly fits onto **ONE single page**. Distill points if necessary.
 2. **Markdown Generation**: Generate `output/resume.md` reflecting the new approved content.
 3. **Docx Generation**: Read the user-approved `work/review_draft_[Company]_[Role].md` and write a python script using `python-docx` to replace the exact strings in `resources/样板范例.docx` with the new content, preserving all XML styles (fonts, margins, boldness). Save to `output/`.
-4. **File Naming Rule**: You MUST rename the final DOCX/MD exactly according to this format: `YYYYMMDD-Company/Role-简历-Name-ClassYear-University-Phone.docx` (e.g., `20260413-腾讯产品经理-简历-张三-2026届-北京大学-13800000000.docx`).
+4. **File Naming Rule**: You MUST rename the final DOCX/MD exactly according to this format: `YYYYMMDD-[Company]-[Role]-简历-Name-ClassYear-University-Phone.docx` (e.g., `20260413-腾讯-产品经理-简历-张三-2026届-北京大学-13800000000.docx`).
 5. **Final Delivery**: Provide the user with a **Tailoring Report**: JD Match Explanation, Before-After Diff for key projects, and Pending Risk Points. Finally, generate `output/pitch_script.md` containing a bilingual oral presentation.
+
+### Step 9: Cover Letter Generation (Email Pitch)
+1. **Targeting**: After the resume is finalized, automatically generate a highly customized email cover letter for the user to send.
+2. **Format Rule (NO MARKDOWN)**: Email clients cannot render markdown. You MUST use pure text. Do NOT use `**bold**` or `- bullet` lists. Use numbered lists (`1.`, `2.`, `3.`) instead.
+3. **Structure & Tone**:
+   - **Subject Naming Convention**: `应聘 [Target Role] - [Name] - [University]` (e.g., `应聘 抖音电商推荐策略产品实习生 - 沈妍 - 华东师范大学`).
+   - **Greeting & Intro**: Direct and professional reporting tone.
+   - **Core Match (3 Points)**: Extract 3 core selling points that perfectly map to the JD's requirements (e.g., Data/SQL, Domain Insight, Execution/Soft Skills).
+   - **Availability**: Clearly state start date, days per week, and duration.
+   - **Closing**: Contact info and GitHub link.
+4. **Storage**: Append this new pitch to `Career_Knowledge_Base/Cover_Letters_and_Pitches.md` for the user to copy directly.
