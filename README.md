@@ -1,6 +1,6 @@
 # Vibe CV Copilot: 你的专属 Headhunter 级简历智能体
 
-> 本项目通过 Trae (Vibe Coding) 从 0 到 1 搭建，致力于解决 **“海投简历修改繁琐、排版易碎、面试经不起深挖”**的求职痛点。
+> 本项目通过 Trae (Vibe Coding) 从 0 到 1 搭建，致力于解决“海投简历修改繁琐、排版易碎、面试经不起深挖”的求职痛点。
 
 ## 🎯 痛点与破局：为什么 Vibe CV Copilot 值得你下载？
 
